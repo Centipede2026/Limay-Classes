@@ -1,0 +1,62 @@
+As data are added to a list and collisions are resolved some hashing algorithm tend to cross data to group
+within a list. This tendency of data to build up unevenly across a hashed data is known as plus string. 
+It's usually created by collision. if the list consist high level of plus string then the number of probes
+to locate an element grows. And processing effeciency of a list is reduced. There are 2 types of clusetrs 
+the first primary clustering occurs when data becomes clustered around a home address. It is easy to identify
+it is around a home address in our list.
+
+The secondary clustering occurs when data become grouped along a collision path. It is not easy to identify.
+It is widely distributed accross a whole list. If the data all lay along a travelled collision path,
+However the time to locate requested element can become large.
+
+Here we need to design our hashing algorithm to minimise clustering. With the exception of direct and subtraction
+method we can not eliminate clustering.
+
+There are 2 different approaches to resolve collisions:
+.   1.Open Addressing
+.   2.Linked List
+
+OPEN Addressing
+This is the first collision resolution method, resolves collision in the home area. When a collision occurs
+the home area addresses are searched for an open or unoccupied element, where the new data can be placed. 
+There are four different methods:
+.   1.Linear Probe
+.   2.Quadratic Probe
+.   3.Sudo-random rehashing
+.   4.Key Offset
+
+Linear Probe 
+In this method when the collision occurs the second data will be stored in the next available address.
+This has 2 advantages:
+.   1.They are simple to implement.
+.   2.Data tend to remain near their home address.
+On the other hand it tends to produce primary clustering.
+
+Quadratic Probe
+In this method the increment is the collision probe number squared. For the first probe we add 1sq, for the 
+second collision probe we add 2sq, for the third collision probe we add 3sq, and so forth until we find an
+empty element or we exhaust the possible elements. To ensure that we don't run of the end of the address list
+we use the modulo of the quadratic sum of the new address. A potential disadvantage is the time required is to 
+square the probe number. It is having one limitation, it is not possible to generate new address for every element
+in the list. 
+
+Sudo-Random Re-Hashing 
+Also known as Double Hashing, in this method rather than using an arithmetic probe function the address is 
+Re-Hashed. In this method we use a Sudo-random number to resolve the collision. Once a collision occurs, 
+there is only one collision reservation path along the list that is followed by all keys.
+
+Key offset
+It is a double hashing method, it produces different collision path for different keys.
+
+LINKED LIST RESOLUTION
+A major disadvantage to open addressing is that each collision resolution increases probability of future 
+collisions. This disadvantage is eliminated in the second approach to collision resolution linkedlist.
+A linkedlist is an ordered collection of data in which each element contains the location of the next element
+
+The linkedlist resolution uses a separate area to store collision and chains all synonyms together in a
+linked list. It uses 2 storage areas, prime area and overflow area. Each element in the prime area contains an 
+additional field, a link head pointer to 
+when a collision occurs one element is stored in the prime area and chained to it's corresponding linkedlist 
+in the overflow area. The overflow area can be any data structure, it is tipically implemented as a linkedlist
+in dynamic memory. The data can be stored in any order. The LIFO sequence is the most common and also it is
+faster for insertion.

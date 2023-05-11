@@ -1,0 +1,12 @@
+1D array using pointers 
+  0  1    2   3   4
+|12|  3|  9|  8|  6|
+100 102 104 106 108
+
+
+
+increment in pointers
+a=a+1*sizeof(data type)
+e.g. a=a+1*1   for char in x16
+     a=a+1*2   for int in x16
+     thisa happends by default

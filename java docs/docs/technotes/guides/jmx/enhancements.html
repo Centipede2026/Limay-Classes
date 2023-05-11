@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- USE THIS TEMPLATE WHEN ENHANCEMENTS ARE SHORT; YOU THEN WILL USE JUST
+   ONE FILE TO DOCUMENT ALL THE ENHANCEMENTS OF EACH VERSION CURRENTLY SUPPORTED
+   -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+   <HEAD>
+     <link rel="stylesheet" href="../../css/guide.css type=text/css">
+     <TITLE>Sun JDK: Enhancements in the Java Platform</TITLE>
+     <META  name="collection" content="reference">
+   </HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#000077" ALINK="#FF0000">
+<TABLE summary="layout" BORDER="0" WIDTH="100%">
+
+<TR>
+<TD WIDTH="60">
+
+   <IMG SRC="../../../images/javalogo52x88.gif" ALT="Java" BORDER=0 WIDTH=52 HEIGHT=88>
+
+</TD>
+
+<TD>
+<h1 align=center>JMX API Enhancements</h1>
+</TD>
+
+<TD ALIGN=RIGHT VALIGN=TOP>
+   <font size="-1"><a href="index.html">Guide-Index</a></font>
+</TD>
+</TR>
+</TABLE>
+
+<UL>
+<LI><a href="#6">Enhancements in Java SE 6</a>
+<LI><a href="#5.0">Enhancements in J2SE 5.0</a>
+</UL>
+<hr>
+
+
+<h2><a name="6">Enhancements in Java SE 6</a></h2>
+
+<h3><a name="6package1">javax.management</a></h3>
+<ul>
+<li> <b>Generification.</b> 
+     <br>
+     The JMX API now fully supports Generics.
+</li><br>
+<li><b><code>ObjectName</code> supports wildcards.</b>
+    <br><code>key=*</code> wildcards are now supported in <a href="../../../api/javax/management/ObjectName.html">ObjectName</a>. Previously, <code>"domain:key1=value1,*"</code> could be used to match MBeans that have <code>key1=value1</code> in their name, but <code>"domain:key1=*"</code> could not be used to match MBeans that have <code>key1</code> in their name. This is now possible.
+ </li><br>
+ <li><b>New <code>JMX</code> class.</b>
+ <br>
+ A new class, <a href="../../../api/javax/management/JMX.html">javax.management.JMX</a>, has been added to house constants and static methods.
+ </li><br>
+  <li><b>MBean Descriptors added.</b>
+ <br>
+MBean Descriptors have been added. Descriptors allow you to give additional information about MBeans to management clients. See <a href="tutorial/essential.html#wp1055639">MBean Descriptors</a> in the JMX Technology Tutorial for information.
+ </li><br>
+ <li><b>MXBeans added.</b>
+ <br>
+MXBeans have been added. MXBeans are MBeans that provide a convenient way to bundle related values together without requiring clients to be specially configured to handle the bundles. A defined set of MXBeans already existed in the J2SE 5.0 platform, but Java SE 6 introduces an API to allow you to program your own custom MXBeans. See <a href="tutorial/essential.html#wp1054551">Introducing MXBeans</a> in the JMX Technology Tutorial for information.
+ </li><br>
+</ul>
+
+<h3><a name="6package2">java.management.monitor</a></h3>
+<ul>
+<li> <b>JMX Monitor API now supports complex types.</b> 
+     <br>
+     Improvements have been made to the <a href="../../../api/javax/management/monitor/package-summary.html">JMX Monitor API</a> to support complex types. Previously, only attributes of simple types could be monitored, but often, the value to be monitored is buried inside a more complex type. See the <a href="JMX_1_4_specification.pdf">JMX Specification, version 1.4</a>, for details of the behavior of monitors.
+</li><br>
+
+</ul>
+
+<p>For the full list of JMX API enhancements added in the Java SE platform, version 6, see the <a href="../../../../6/docs/technotes/guides/jmx/enhancements.html">Java SE 6 JMX API enhancements</a>.
+
+<!--  =============================================== -->
+<h2><a name="5.0">Enhancements in J2SE 5.0</a></h2>
+
+<p>The Java Management Extensions (JMX) technology became a part of the Java platform in the Java 2 Platform, Standard Edition
+(J2SE) 5.0.
+
+
+
+<HR SIZE=3 NOSHADE>
+
+<TABLE summary="layout" BORDER="0" WIDTH="100%">
+<TR VALIGN=TOP>
+<TD>
+<FONT SIZE="-2">
+   <A HREF="../../../legal/SMICopyright.html">Copyright &#169;</A> 1999-2006
+   <A HREF="http://www.sun.com/">Sun Microsystems, Inc.</A>
+    All Rights Reserved.</FONT>
+   <br>
+
+
+</TD>
+<TD ALIGN=RIGHT>
+   <IMG SRC="../../../images/sunlogo64x30.gif" ALT="Sun" BORDER=0 WIDTH=64 HEIGHT=30>
+</TD>
+</TR>
+</TABLE>
+  </body>
+</html>

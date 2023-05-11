@@ -1,0 +1,45 @@
+Data structure is an aggregation on atomic and composite data types into a set with defined relationships.
+In this definition structures means set of rules that hold the data together. In other words if we take a combination
+of data types and fit them into a structure such that we can define its relating rules, we have made a data structure.
+A data structure can be nested.
+
+#Atomic data: The data that we choose to consider as a single non-decomposible entity. 
+#Composite data: The data that can be broken out into sub-fields that have meaning 
+    for example telephone number,pin code number.
+#Abstract Data type: It is a data declaration packaged together with the operations that are meaningful on the
+    data type, in other words we incapsulate the data and operations on data and we hide them from the user.
+
+1.Linear List
+A linear list is a list in which each element has a unique successor, here before we have studied a linear list structure
+in the array. The arrays are easy to create and use, they are inefficient whenever sequenced data is needed to be
+inserted or deleted. The linear list can be divided into 2 categories- a.general b.restricted
+    General- In a general list data can be inserted and deleted anywhere and there are no restrictions on the 
+      operations that can be used to process the list. The general list structure can be further described by there 
+      data as random or ordered list.
+        Random list- In a random list there is no ordering of the data.
+        Ordered list- In a ordered list the data is arranged according to a key.(singular or complex key; primary or secondary)
+
+        # a key is one or more feeds within a structure that are used to identify the data or otherwise control its
+        use. In a simple array the data is also the keys, in an array of record structures the key is a field that 
+        identifies the record.
+    Restricted- In a restricted list data ca nonly be added or deleted at the ends of the structure and processing
+      is restricted to operations of data at the end of the list. Here we study 2 restricted list structures
+        1.FIFO (First in first out)
+        2.LIFO (Last in First out)
+
+There are 4 operations generally associated with linear list- insertion, deletion, retrival, and traversal.
+The first 3 apply to all list and list traversal is not applicable to restricted list.
+
+LINKED LIST
+Linked list is an ordered collection of data in which each element contains the location of the next element i.e. 
+each element contains 2 parts, data and link(or next). The data part holds useful information, the data to be 
+processed. The link is used to chain the data together, it contains a pointer that identifies the next element in
+the list, there is also a pointer variable that identifies the first element in the list. The name of the list is 
+the same as name of this pointer variable. The simple linked list that we have described here is commonly known as
+a 'singly linked list' because it contains only one link to a single successor.
+
+Advantage of linked list
+the major advantage of linked list over other general list structure is that data is easily inserted and deleted. 
+It is not necessary to shift elements of a linked list to make room for a new element or to delete a element, on the
+other hand the elements are no longer physically sequenced, we are limited to sequential searches we can not use 
+binary search.

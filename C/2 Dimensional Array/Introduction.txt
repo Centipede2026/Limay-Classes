@@ -1,0 +1,16 @@
+Arraya of 1D array is a 2-D array
+1D array:
+    int x[5];
+    |   |   |   |   |   |
+      |
+      V
+    x[0]
+2D array:
+    int y[5][2]
+    |0   |1   |2   |2   |4   |
+    |1   |1   |1   |1   |1   | ->x[4][1]            
+               |
+               V
+              x[2][1]
+
+char k[5][10];

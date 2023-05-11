@@ -1,0 +1,43 @@
+__________________________________________________STACK_____________________________________________________________
+
+A stack is a linear list in which all additions and deletions are ristricted to one end called the Top. If we were to 
+insert a data series into a stack and then remove them,there order will be reversed. This reversing attribute has lead
+to stacks being known as the Last in First out (LIFO) data structure.
+    1.Stack of coins
+    2.Stack of dishes
+    3.Function calling in C programming
+    4.Recursive functions
+    5.Parenthesis matching from an inputed expression
+    6.Conversion of an in-fix expression (a+b) into it's equivalent post-fix expression (ab+) or pre-fix expression(+ab)
+    and evaluation of post-fix expression.
+
+There are 3 basic stack operations
+    
+    1.Push- it adds an item at the top of the stack. After the push the new elements becames the top. There is only
+    one potential problem with this simple operation, we must ensure there is room for a new item. If there is no 
+    room then the stack is in an overflow state
+    
+    2.Pop- When we pop the stack we remove the item at the top of the stack and return it to the user. because the top
+    item has been removed the new holder item of the stack becomes the top. When the last item in stack is deleted
+    it must be set to it's empty state. If pop is called when stack is empty it is in an underflow state.
+    
+    3.Stack Top- The stack top copies the item at the top of the stack i.e. it returns the data to the top element to
+    the user, but does not delete it.
+
+    The stack can be implemented using 
+        A.Arrays
+        B.Linked list
+
+___________________________________ARRAY IMPLEMENTATION OF STACK____________________________________________________
+
+#define M 5
+typedef struct stack
+{
+    int top;
+    int arr[M];
+}STK;
+
+void init(STK*t)
+{
+    t->top=-1;
+}

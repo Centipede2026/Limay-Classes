@@ -1,0 +1,14 @@
+To represent a graph we need to store 2 sets the first set represents the vertices of the graph and the second set
+represents the edges. The 2 most common structures used to store these sets are Arrays and linked list. The arrays
+offers some simplicity and processing efficiency, number of vertices must be known in advance, this is a major 
+limitation
+
+1.Adjacent C matrix 
+The adjacent C matrix uses a vector (1-D array) for the vertices and a matrix (2-D array) to store the edges. If 2
+vertices are adjacent, i.e. is there is an edge between them, then the matrix intersect has a value of 1. If there
+is no edge between them the intersect is set to zero
+
+The adjacency list uses a 2-D ragged array to store the edges.The vertex list in a singlly linked list of vertices
+in a list. Depending on the application it could also be implemented using double linked list. The pointer at the 
+left of the list links the vertex entries together. The pointr at the right in the vertex is a head pointer to a 
+linked list of edges from the vertex.

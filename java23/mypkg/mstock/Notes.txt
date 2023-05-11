@@ -1,0 +1,25 @@
+1.Create a new package stock on device
+2.Define interfaces
+    i.DataIO
+        |
+    NewDataIO
+
+   ii.ObjectAMD
+        add()
+        mod()
+        del()
+        displayAll()
+   iii.Transaction
+        addQty()
+        subQty()
+        getBalance()
+    iv.Menu
+        menu()
+3.Classes
+    Item
+Interfaces Serializable
+            NewDataIO
+4.Classes 
+Interfaces  New Item    
+            ObjectAMD   
+            Transaction

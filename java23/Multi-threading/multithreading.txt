@@ -1,0 +1,47 @@
+multithreading is conceptual programming parading where a program or process is divided into 2 or more sub-programs or processes which can be implemented at the same time in parallel. Once a program can display an animation on the screen while another may build the next animation to be displayed. This is something similar to dividing a task into subtasks and assigning them to different people for execution independently and simultaneously. In most of our computers, we have only a single processor. And therefore in reality the processor is doing only one thing at a time, however, the processor switches between the processes so fast that it appears to human beings that all of them are being done simultaneously. Java programs that we have seen and discussed so far contain only a single sequential flow of control. The program begins, runs through a sequence of executions, and finally ends. At any given point of time, there is only one statement under execution. A thread is similar to a program that has a single flow of control. It has a beginning, a body, and an end, and executes commands sequentially. All main programs here before developed and executed can be called single-threaded programs. Every program will have at least one threat.
+
+A unique property of Java is its support for multithreading, i.e. java enables us to use multiple flows of control in developing programs. Each flow of control may be thought of as a separate module known as a thread that runs in parallel to others a program that contains multiple flows of control known as a multi-threaded program. For eg- if a Java program is with 4 threads, one main and 3 others. The main thread is actually the main method module which is designed to create and start the other 3 threads. Once initiated in the main thread the other 3 threads run concurrently and ensures the join. The ability of language to support multi-threads is referred to as concurrency. Still, threads in Java are subprograms of a main application program and share the same memory space they are known as lightweight threads. 
+
+The threads running in parallel do not mean that they actually run at the same time. Since all the threads are running on a single processor the flow of execution is shared between the threads. The Java interpreter handles the switching of control between the threads in such a way that it appears they are running concurrently. 
+
+Threads are extensively used in Java-enabled browsers. These browsers can download a file to the local computer, display a web page in the window, output another webpage to a printer, and so on.
+
+Any application we are working on that requires 2 or more things to be done at the time is probably the best one for the use of threads. 
+
+--Multitasking--
+
+1. It is an operating system concept in which multiple tasks are performed simultaneously.
+2. It supports multiple executions of programs simultaneously.
+3. The processor has to switch between different programs and processes.
+4. It is less efficient in comparison to multi-threading.
+5. A program or process is the smallest unit in the multitasking environment. 
+6. It helps in developing an efficient operating system.
+7. It is expensive in the text of context switching. 
+
+
+--Multi-Threading--
+
+1. It is a programming concept in which a program or a process is divided into two or more subprograms or threads that are executed at the same time in parallel.
+2. It supports execution of multiple parts of a single program simultaneously.
+3. The processor has to switch between different parts or threads of a program.
+4. It is highly efficient.
+5. A thread is a smallest unit in multi-threading.
+6. It helps in developing efficient programs.
+7. It is cost efficient in case of context switching.
+
+#Creating Threads
+Thread creation in Java is simple. The threads are implemented in the form of objects that contain a method called run(). The run() method is the defined procedure of any thread. It is the only method in which threads behavior can be implemented. The general form for the run method is:
+
+public void run(){
+    ~~
+}
+
+the run() should be invoked by an object of the concerned thread. This can be achieved by creating the thread and initiating it with the help of another thread method called start(). 
+A new thread can be created in two ways:
+1) By creating a thread class: Define a class that extends Thread class and override its run method with the code required by the thread.
+2) By converting a class to a thread: Define a class that implements a Runnable Interface. THe Runnable Interface has only one method run(). That is to be defined in the method with the code to be executed by the thread.
+
+Q} What will happen if we call the run() of a thread object directly instead of calling the start() method?
+-> When ever a run() method is invoked by the start() method, the thread start in a separate call stack. However invoking the run() method directly from the main method causes the corresponding thread to go into the current call stack that of main() method.
+
+Since the direct call to the run() method from main, does not create a separate call stack it's instructions are executed sequentially and not parallelly, thus calling the run() method directly causes the program to behave like a normal single threaded program.
