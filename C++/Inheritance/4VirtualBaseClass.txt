@@ -1,0 +1,42 @@
+____________Virtual Base Class_____________
+
+Class A
+{
+};
+Class B:public A
+{
+};
+Class C:public A
+{
+};
+Class D:public B,public Class
+{
+};
+
+:-4VirtualBaseClass1.jpeg
+
+Consider a situation where all the kinds of inheritance i.e. multiple, multilevel and hierarchical are present as 
+shown in above diagram. The class D has 2 direct base class B and C which themselves has a common base class A. 
+The class D inherites the traits of A via 2 separate paths. It can also inherite directly as shown by broken lines.
+The class A is sometimes refered to as indirect base class. The inheritance by D as shown in the above diagram 
+might host some problems. All the public and protected members of A are inherited into D twice, first via B and 
+again via C. This means the class D would have duplicate sets of the members inherited from A. This introduces 
+ambiguity and must be resolve. The duplication of inherited members due to this multiple paths can be avoided by 
+making the common base class as virtual base class while declaring the direct or intermediate base classes as shown 
+below
+
+Class A
+{
+};
+Class B:public A
+{
+};
+Class C:virtual A
+{
+};
+Class D:public B,public Class
+{
+};
+
+When class is made a virtual base class, C++ takes necessary care to see that only one copy of that class is inherited
+regard less of how many inhertance class exists between a virtual base class and a derived class.

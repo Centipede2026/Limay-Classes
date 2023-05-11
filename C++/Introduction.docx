@@ -1,0 +1,87 @@
+Characteristics of Procedure Oriented Programming        -from Balguruswamy
+  1.Emphasis is on doing things.
+  2.Large Programs are divided into smaller programs known as functions.
+  3.Most of the functions share global data.
+  4.Data move openly around the system from function to function.
+  5.Functions transform data from one form to another.
+  6.Emploies top-down approach program design.
+
+Object Oriented Programming
+  The Major motivating factor in the invention of object oriented approach is to remove some of
+  the flaws encountered in the procedural approach. OOP treats data as a critical element in the
+  program development and does not allow it to flow freely around the system.It ties data more 
+  closly to the functions that operate on it and protects it from accidental modification from 
+  outside functions.OOP allows deep composition of problem into a number of entities called Objects
+  and then builds data and object around this function.
+
+Characteristics
+  1.Emphasis is on data rather than Procedure.
+  2.Programs are divided into what are known as Objects.
+  3.Data structures are designed such that they characterise the objects.
+  4.Funcitons that operate on the data of the object are tied together in the data structure.
+  5.Data is hidden and can not be accessed by external functions.
+  6.Objects may communicate with each other through functions.
+  7.New data and functions can be easily added whenever necessary.
+  8.Follows bottom-up approach in program design.
+
+Object Oriented Programming
+  Object Oriented Programming ss an approach that provides a way of modulerizing programs by 
+  creating partitioned memory area for both data and functions that can be used as a templet for
+  creating copies of such modules on demand. An object is considered to be a partitioned area 
+  of computer memory that stores the data, and set of operation that can acess the data
+
+Concepts of Object Oriented Programming
+  // instance creation-the thing that satisfies predefine feature is known as instance, instance
+  creation is the whole process of creating a variable and reserving memomry bytes for it.and 
+  assigning value to a variable so in further program it will be called by the variable name //
+  
+  1.Object: Objects are the basic run-time entities in an object oriented system. They may 
+    represent a person, a place, a bank account, a table of data or any item that the program
+    has to handle.They may also represent user define data, such as vector, time, list, ect. 
+    Objects take up space in the memory. Each Object contains data, and code to manipulate the 
+    data. Objects can intract without having to know details of each others data or code.
+
+  2.Classes: We just mentioned that, objects contain data and code to manipulate that data. The 
+    entire set of data and code of an object can be made a user-define type withi the help of a
+    class. Infact objects are the variable of the type class. Once a class has been defined we 
+    can create any number of objects belonging to that class. Each object is associated with 
+    data of type class with which they are created. A class is thus a collection of objects of 
+    similar type. Classes are user-defined data types and behave like the build-in types of a 
+    programming language. The syntax used to create a object is no different than the syntac 
+    used to create an integer object in C.
+
+  3.Data Abstraction and Encapsulation: The wrapping up of data and funcitons into a single unit
+    is known as Encapsulation. This is the most striking feature of a class. The data is not 
+    accessible to the ooutside world and only thouse functions which are wraped in the class 
+    can access it. This functions provide an interface between objects data and the program. 
+    This insulation of the data from direct access by the program is called Data Hiding.
+    Abstraction refers to the act of representing essential features without including the 
+    background details or explanation. Classes use the concept of abstraction and are defined 
+    as a list of abstract attributes such as size,weight,cost and functions to operate on this 
+    attributes. They encapsulate all the essential properties of the objects that are to be created.
+    The attributes are sometimes called Data Members because they hold information and the 
+    function that operate on this data are sometimes called Member Functions.
+
+  4.Inheritance: The process by which objects of one class acquires properties of objects of 
+    another class, It supports the concept of Hierarchical Classification. The principal behind
+    this sort of division is that each derived class shares common characters with the class 
+    from which it is derived.
+
+Polymorphism
+  The process of making operator to exhibit different behaviours in different instances is known
+  as Operator Overloading.Polymorphism plays an important role in allowing objects having 
+  different internal structures to share the same external interface. This means that a general 
+  class of operation maybe accessed in same manner even though specific action associated with 
+  each operation may differ.
+
+Dynamic Binding     //2 types dynamic and early
+  Binding referes to the linking of a procedure call to the code to be executed in response to
+  the call. Dynamic binding also known as late binding means that the code associated with a 
+  given procedure is not known until the time of the call at run-time. It is associated with 
+  polymorphism and inheritance. The function call associated with polymorphic reference depends
+  on the dynamic type of that reference.
+
+Message passing
+  A message for an object is a request for execution of a procedure and therefore will invoke a 
+  funciton in the receiving object that generates the desired results. Message passing involves
+  specifing name of the object, name of the message or funciton and the information to be send.
